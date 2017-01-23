@@ -9,12 +9,12 @@ var div1 = document.createElement("div");
 
 function nombreS(){
     var contenedor1 = document.getElementById("name");
-    span1.innerHTML="La primera letra bebe ser mayúscula";
+    span1.innerHTML="La primera letra debe ser mayúscula";
     contenedor1.parentNode.appendChild(span1);
 }
 function apellidoS(){
     var contenedor2 = document.getElementById("lastname");
-    span2.innerHTML="La primera letra bebe ser mayúscula";
+    span2.innerHTML="La primera letra debe ser mayúscula";
     contenedor2.parentNode.appendChild(span2);
 }
 function emailInvalido(){
@@ -29,7 +29,7 @@ function passwordIncorrecto(){
 }
 function passwordCaracter(){
     var contenedor5 = document.getElementById("input-password");
-    span5.innerHTML="Coloque mínimo 6 caracteres";
+    span5.innerHTML="Coloque mínimo 6 carácteres";
     contenedor5.parentNode.appendChild(span5);
 }
 function seleccionar(){
