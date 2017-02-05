@@ -1,4 +1,4 @@
-//Creo un Span.y verifica si esta creado mi span 
+//Esta funccion Crea un Span.y verifica si esta creado mi span 
 function mostrarMensaje(input, _mensaje, mode=false){
     var span = input.parentNode.getElementsByTagName("span");
     if (mode) {
@@ -21,7 +21,7 @@ function validateForm(){
     seleccionar();
     mensaje();
 }
-//Codigo para name lastname , email password
+//funccion de  name, lastname , email y password,para que el usuario cumpla los caracteres especificos.
 function validate_input(input) {
     console.log(input);
     var validations = {
@@ -37,10 +37,11 @@ function validate_input(input) {
 }
 function nombres() {
     var name = document.getElementById("name");
+    name.value = name.value.charAt(0).toUpperCase() + name.value.slice(1);
     if (validate_input(name) == false){
         mostrarMensaje(
             name, 
-            "Incorrecto, La primera letra debe ser Mayúscula", 
+            "Incorrecto, No debe tener números", 
             true
         );
     } else {
@@ -49,10 +50,11 @@ function nombres() {
 }
 function apellidos(){
     var lastname = document.getElementById("lastname");
+    lastname.value = lastname.value.charAt(0).toUpperCase() + lastname.value.slice(1);
     if (validate_input(lastname) == false){
         mostrarMensaje(
             lastname, 
-            "Incorrecto, La primera letra debe ser Mayúscula y sin números",
+            "Incorrecto, No debe tener números",
             true
         );
     } else{
@@ -64,7 +66,7 @@ function correo(){
    if (validate_input(email) == false){
         mostrarMensaje(
             email, 
-            'email incorrecto',
+            'Emáil incorrecto',
             true
         );
    } else{
@@ -95,7 +97,7 @@ function seleccionar(){
         mostrarMensaje(control);
     }
 }
-//Creo un div , el cual avisara que se tiene que llenar todo 
+//Funccion para crear un div , el cual informara al usuario, que se tiene que llenar todo. 
 function manageMessage(_idInput, _mensaje, mode=false){
     var elemento = document.getElementById(_idInput);
     //verifica si esta creado mi div 
